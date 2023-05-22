@@ -1,11 +1,8 @@
 body{
-
     position: relative;
     width: 1440px;
-    height: 1024px;
-    background: #F3F5FC;
-   
-    
+    height: auto;/*1024*/
+    background: #F3F5FC; 
 }
 
 header{
@@ -18,26 +15,24 @@ header{
     width: 120px;
     height: 48px;
     left: 40px;
-    top: 40px;
- 
+    top: 40px; 
 }
 
 .divVacia{
     position: absolute;
     width: 28%;
-    height: 944px;
+    height: 744px;/*944*/
     left: 1000px;
     top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-
 }
 
 .mensaje{
     position: absolute;
     width: 336px;
-    height: 781px;
+    height: 581px;/*781*/
     left: 1032px;
     top: 72px;
     font-family: 'Inter';
@@ -48,7 +43,7 @@ header{
     color: #495057;
     resize: none;
     border: none;
-    text-align: center;
+    text-align: center;    
 }
 
 .mensaje:focus{
@@ -65,9 +60,8 @@ header{
     width: 336px;
     height: 122px;
     left: 1032px;
-    top: 619px;
-    
-}
+    top: 519px;/*619*/    
+} 
 
 .primerParrafo{
     width: 336px;
@@ -79,6 +73,8 @@ header{
     line-height: 120%;
     text-align: center;
     color: #343A40;
+    animation-name: caida;
+    animation-duration: 1s;
 }
 
 .segundoParrafo{
@@ -91,14 +87,20 @@ header{
     line-height: 150%;
     text-align: center;
     color: #495057;
-
+    animation-name: caida;
+    animation-duration: 1s;
 }
+
 .imgMono{
     position: absolute;
     width: 336px;
     height: 304px;
     left: 1032px;
-    top: 283px;
+    top: 183px;/*283*/
+    animation-name: caida;
+    animation-duration: 2s;
+    animation-name: rotar;
+    animation-duration: 2s;
 }
 
 .botonCopiar{
@@ -108,7 +110,7 @@ header{
     width: 336px;
     height: 67px;
     left: 1032px;
-    top: 885px;
+    top: 685px;/*885*/
     border: 1px solid #0A3871;
     border-radius: 24px;
     font-family: 'Inter';
@@ -118,7 +120,7 @@ header{
     line-height: 19px;
     text-align: center;
     color: #0A3871;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .textArea{
@@ -136,13 +138,13 @@ header{
     background-color: #F3F5FC;
     border: none;
     color: #0A3871;
-    text-transform: lowercase;
-
-   
+    text-transform: lowercase;   
 }
+
 .textArea:focus{
     outline: none;
 }
+
 .informacion{
     display: flex;
     flex-direction: row;
@@ -153,7 +155,7 @@ header{
     width: 229px;
     height: 18px;
     left: 240px;
-    top: 851px;
+    top: 651px;/*851*/
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -163,9 +165,9 @@ header{
     opacity: 0.8;
     
 }
+
 .informacion::before{
-    content: url(imagenes/bi_exclamation-circle-fill.png);
-  
+    content: url(imagenes/bi_exclamation-circle-fill.png);  
 }
 
 .botones{
@@ -178,11 +180,10 @@ header{
     width: 680px;
     height: 67px;
     left: 240px;
-    top: 885px;
+    top: 685px;/*885*/
 
 }
 .botonEncriptar{
-    /* Auto layout */
     display: inline;
     padding: 24px;
     width: 328px;
@@ -197,12 +198,9 @@ header{
     text-align: center;
     color: #FFFFFF;  
     cursor: pointer;
-
-
 }
 
-.botonDesencriptar{
-    
+.botonDesencriptar{    
     box-sizing: border-box;   
     display: inline;
     padding: 24px;
@@ -224,14 +222,26 @@ header{
     cursor: pointer;
 }
 
+@keyframes caida {
+    0% {
+      transform: translateY(-150%);}
+    100% {
+      transform: translateY(0);}
+  }
+
+  @keyframes rotar {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+  }
+
 footer{        
     position: absolute;
     width: 500px;
     height: 18px;
     left: 40px;
-    top: 970px;
-
+    top: 770px;/*970*/
 }
+
 a{
     text-decoration: none;
     font-family: 'Inter';
@@ -240,5 +250,4 @@ a{
     font-size: 12px;
     line-height: 150%;    
     color: #495057;
-
 }
