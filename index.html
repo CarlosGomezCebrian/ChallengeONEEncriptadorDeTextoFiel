@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet">
+
+    <title>encriptadorAluraFiel</title>
+</head>
+<body>
+    <header> 
+        <a href="https://www.aluracursos.com/" target="_blank">
+        <img src="imagenes/Vector.png" alt="logoDeAlura"></a>
+    </header>
+    <main>
+        <section class="seccionIzq">
+            <textarea class="textArea" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div>
+                <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="botonEncriptar" onclick="botonEncriptar()">Encriptar</button>
+                <button class="botonDesencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        </section>
+        <section class="seccionDer">
+            <div class="divVacia" onclick="ingresarTexto()"></div>
+            <div>
+                <textarea  class="mensaje" cols="30" rows="10" onclick="ingresarTexto()"></textarea>
+                <div>
+                    <button class="botonCopiar" onclick="copiarTexto()">Copiar</button>
+                </div>
+            </div>
+            <div class="ningunMensaje">
+                 <img class="imgMono" src="imagenes/muneco.png" alt="MunecoBuscando" onclick="ingresarTexto()">
+            </div>
+            <div class="textoImagen">
+                <p class="primerParrafo" onclick="ingresarTexto()" >Ningún mensaje fue <br> encontrado</p>
+                <p class="segundoParrafo" onclick="ingresarTexto()">Ingresa el texto que desees encriptar o <br>desencriptar</p>
+            </div>
+
+        </section>
+        
+    </main>
+    <footer> 
+        <a href="https://www.aluracursos.com/challenges/challenge-one-logica" target="_blank">
+        <h6>Diseñado por: Challenge ONE | Alura Cursos Online. Realizado por:CarlosOmarGomez</h6></a>
+    </footer>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
